@@ -1,15 +1,11 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"net/http"
+	"urils/application/initialize"
 )
 
 func main() {
-	router := gin.Default()
-	router.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "maotuan")
-	})
-	router.Run(":8000")
+	Router := initialize.InitRouter()
+	Router.Run(":8000")
 
 }
